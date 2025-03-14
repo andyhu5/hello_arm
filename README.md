@@ -1,3 +1,16 @@
+#前置条件:
+- Glibc版本最好和开发机一致,使用`ldd --version`查看版本;
+- uname -m 查看开发板的架构,决定选择对应的编译链接工具;
+- 使用cross工具 必须配合docker使用,如Docker for windows都可以使用;
+- 如有其他问题,可以私信我~~
+
+
+# 交叉编译
+- 交叉编译是指在一个平台上编译出另一个平台上可执行的二进制文件。
+- 例如，在 x86 平台上编译出 ARM 平台上可执行的二进制文件。
+
+# 如何在 Rust 中进行交叉编译
+
 # Cross-Compiling Rust for ARM64/AArch64
 
 Cross-compiling Rust code for ARM64 (AArch64) architecture is fairly straightforward. Here's a concise guide to get you started:
@@ -60,6 +73,11 @@ Would you like more information about a specific part of this process?
 
 
 
+
+
+# 如何在 Rust 中进行 Release 优化
+
+
 在 Rust 中，Release 模式下的优化对于提升程序性能、减少二进制文件大小等方面至关重要。以下是一些在 Rust 项目中进行 Release 优化的方法：
 
 ### 1. 使用 `--release` 标志
@@ -120,3 +138,8 @@ fn add(a: i32, b: i32) -> i32 {
 ```
 
 通过以上这些方法，可以在 Rust 项目的 Release 模式下获得更好的性能和更小的二进制文件大小。
+
+## 参考资料
+资料
+- [Rust 官方文档 - Release Profiles](URL_ADDRESS- [Rust 官方文档 - Release Profiles](https://doc.rust-lang.org/cargo/reference/profiles.html)
+- cross工具 https://github.com/cross-rs/cross
