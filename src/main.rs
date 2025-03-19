@@ -19,7 +19,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     // Print response body as text
     let body = response.text().await?;
     println!("Response body length: {} characters", body.len());
-    println!("First 100 characters of body: {}", &body[..100.min(body.len())]);
+    // println!("First 100 characters of body: {}", &body[..100.min(body.len())]);
     
     Ok(())
 }
